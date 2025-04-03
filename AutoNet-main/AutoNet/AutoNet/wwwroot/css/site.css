@@ -1,0 +1,636 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.navbar {
+    background-color: #2a2a2a;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+    .navbar .nav-link.active {
+        color: red !important;
+    }
+
+    .nav-link:hover {
+        border-bottom: 1px solid red;
+    }
+    .nav-link:active {
+        color: red !important;
+    }
+
+@media (max-width: 576px) {
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+        .navbar-nav .nav-item {
+            text-align: center;
+        }
+}
+
+.navbar-nav .dropdown-toggle::after {
+    display: none;
+}
+
+.footer {
+    background-color: #2a2a2a;
+}
+
+input.input-validation-error {
+    border-color: #dc3545;
+}
+
+span.field-validation-error {
+    color: #dc3545;
+}
+
+.pagination .active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+button, .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button.create, .btn-create {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+
+        button.create:hover, .btn-create:hover {
+            background-color: #45a049;
+        }
+
+    button.update, .btn-update {
+        background-color: #2196F3;
+        color: #fff;
+    }
+
+        button.update:hover, .btn-update:hover {
+            background-color: #1976D2;
+        }
+
+    button.delete, .btn-delete {
+        background-color: #F44336;
+        color: #fff;
+    }
+
+        button.delete:hover, .btn-delete:hover {
+            background-color: #D32F2F;
+        }
+
+    button.register, .btn-register {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+
+        button.register:hover, .btn-register:hover {
+            background-color: #45a049;
+        }
+
+    button.login, .btn-login {
+        background-color: #1976D2;
+        color: #fff;
+    }
+
+        button.login:hover, .btn-login:hover {
+            background-color: #1565C0;
+        }
+
+    button.logout, .btn-logout {
+        background-color: #FF9800;
+        color: #fff;
+    }
+
+        button.logout:hover, .btn-logout:hover {
+            background-color: #FB8C00;
+        }
+
+.remove-btn-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-container:hover .remove-btn-overlay {
+    opacity: 1;
+}
+
+.remove-btn-overlay .btn {
+    z-index: 3;
+}
+
+.btn-arrow {
+    background-color: rgba(255, 255, 255, 0.4)
+}
+
+.car-card {
+    background-color: #333;
+    color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 15px;
+    padding: 10px;
+}
+
+    .car-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .car-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .car-card .car-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    .car-card .car-description {
+        font-size: 1rem;
+        color: #ccc;
+        margin-top: 10px;
+    }
+
+    .car-card .car-price {
+        font-size: 1.25rem;
+        color: #ffcc00;
+        margin-top: 10px;
+    }
+
+    .car-card-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+.latest-cars-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px 10px 0 10px;
+    padding: 10px 10px 0 10px;
+    flex: 1;
+    height: 100%;
+    min-height: 1px;
+}
+
+    .latest-cars-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .latest-cars-card img {
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .latest-cars-card .card-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    .latest-cars-card h6 {
+        margin: 0;
+        flex-grow: 0;
+    }
+
+    .latest-cars-card p {
+        margin: 0;
+    }
+
+.row.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.price-text {
+font-size: 2rem;
+color: #888;
+}
+
+.discount-price-text {
+    font-size: 2.5rem;
+    color: red;
+}
+
+.car-details-card {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.large-car-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.smaller-car-images .small-car-image {
+    width: 100%;
+    height: 75px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+.smaller-car-images .col-3 {
+    padding: 5px;
+}
+
+    .smaller-car-images .col-3:nth-child(4n+1) {
+        padding: 5px 5px 5px 12px;
+    }
+    .smaller-car-images .col-3:nth-child(4n) {
+        padding:5px 12px 5px 5px;
+    }
+
+.car-update-images {
+    height: 150px;
+    object-fit: cover;
+    width: 100%; 
+}
+
+@media (max-width: 576px) {
+    .car-update-images {
+        height: 100px;
+    }
+    .remove-btn-overlay {
+        position: static;
+        opacity: 1;
+        background-color: transparent;
+        margin-top: 5px;
+    }
+
+        .remove-btn-overlay .btn {
+            margin: 0 auto;
+            display: block;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+        }
+
+    .image-container {
+        display: block;
+    }
+
+    .login-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+.account-info {
+    min-width: 250px;
+    padding: 0;
+    border-radius: .5rem;
+    border: 1px solid #ddd;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.account-info-card {
+    background: #333333;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    border-radius: .5rem;
+}
+
+@media (max-width: 576px) {
+    .account-info {
+        min-width: 80%;
+        padding: 0;
+        position: relative;
+        left: 0;
+        transform: none;
+        z-index: 1000;
+    }
+
+    .account-info-card {
+        border-radius: .5rem;
+    }
+
+        .account-info-card .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .account-info-card .col-2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .account-info-card .col-10 {
+            text-align: center;
+        }
+
+        .account-info-card .col-12 {
+            text-align: center;
+        }
+
+        .account-info-card .dropdown-item {
+            padding: 10px;
+        }
+}
+
+.line-with-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+    .line-with-text::before,
+    .line-with-text::after {
+        content: "";
+        flex-grow: 1;
+        border-top: 1px solid white;
+        margin: 0 10px;
+    }
+
+    .line-with-text span {
+        padding: 0 10px;
+        font-weight: bold;
+        color: white;
+    }
+
+.account-modal-header {
+    color: white;
+    background-color: #2a2a2a;
+    border-bottom: 1px solid red;
+}
+.account-modal-body {
+    color: white;
+    background-color: #222;
+}
+
+.account-modal-link {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+    .account-modal-link:hover {
+        background-color: #3a3a3a;
+        color: white;
+    }
+
+@media (min-width: 768px) {
+    .modal-dialog.account-modal {
+        position: absolute;
+        min-width: 270px;
+        right: 16px;
+        left: auto;
+        top: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .modal-dialog.account-modal {
+        position: relative;
+        margin: auto;
+        margin-top: 60px;
+    }
+}
+
+.car-img-modal {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.input-custom-background {
+    color: white;
+    background-color: #444;
+    border: 1px solid black;
+}
+    .input-custom-background:focus {
+        color: white;
+        background-color: #4a4a4a;
+    }
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border: 1px solid black;
+}
+
+input.form-control:focus, textarea.form-control:focus, select.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid black !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
+input[type="checkbox"].custom-checkbox-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-checkbox-box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f8ff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-right: 8px;
+}
+
+input[type="checkbox"].custom-checkbox-input:checked + .custom-checkbox-box {
+    background-color: #66bb6a;
+    border-color: #66bb6a;
+}
+
+.checkbox-container:hover .custom-checkbox-box {
+    background-color: #e0f7fa;
+    border-color: #80deea;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+    .toggle-password:hover,
+    .toggle-password:focus {
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    background-color: #333;
+    color: #ddd;
+    border: 1px solid #444;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+    .page-link:hover {
+        background-color: #555;
+        color: #ddd;
+        border-color: #666;
+    }
+
+.page-item.active .page-link {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+.page-item.disabled .page-link {
+    background-color: #666;
+    color: #999;
+    border-color: #777;
+    pointer-events: none;
+}
+
+.page-item a.page-link {
+    font-weight: bold;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.btn:focus, .fas:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#imageModal .modal-body {
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalImage {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+@media (max-width: 767px) {
+    #modalImage {
+        max-height: 90vh;
+        width: auto;
+    }
+}
+

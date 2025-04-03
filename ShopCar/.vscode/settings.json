@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1d576c35-bbfb-4214-8411-c603602c5df0/resourceGroups/DefaultResourceGroup-EUS/providers/Microsoft.Web/sites/car-shop-olga",
+    "appService.deploySubpath": "ShopCar.ApplicationServices/bin/Release/net6.0/publish"
+}

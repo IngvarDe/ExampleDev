@@ -1,0 +1,27 @@
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore logs and database files
+*.log
+*.ldf
+*.mdf
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore sensitive configuration files
+appsettings.Development.json
+appsettings.Local.json
+
+# Ignore other temporary files
+*.tmp
+*.temp
+*.bak
+*.swp

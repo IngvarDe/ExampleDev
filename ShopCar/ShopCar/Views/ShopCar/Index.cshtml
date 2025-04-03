@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ShopCar.Models.ShopCar.ShopCarViewModel>
+
+@{
+    int rowNumber = 1;
+}
+
+<div>
+    <a asp-action="Create" asp-controller="ShopCar" type="submit" class="btn btn-primary">Create</a>
+</div>
+
+<div class="h1">
+    Shop Car
+</div>
+<form method="post">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Price</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Model</th>
+                <th scope="col">ModelYear</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ShopCar in Model)
+            {
+                <tr>
+                    <td>@rowNumber</td>
+                    <td>@ShopCar.Price</td>
+                    <td>@ShopCar.Brand</td>
+                    <td>@ShopCar.Model</td>
+                    <td>@ShopCar.ModelYear</td>
+                    <td>
+                        <a asp-action="details" asp-controller="ShopCar" asp-route-id="@ShopCar.Id" class="btn btn-info">Details</a>
+                        <a asp-action="update" asp-controller="ShopCar" asp-route-id="@ShopCar.Id" class="btn btn-primary">Update</a>
+                        <a asp-action="delete" asp-controller="ShopCar" asp-route-id="@ShopCar.Id" class="btn btn-outline-danger">Delete</a>
+                    </td>
+                </tr>
+
+                rowNumber += 1;
+            }
+        </tbody>
+    </table>
+</form>

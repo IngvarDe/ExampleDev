@@ -1,0 +1,40 @@
+﻿@model Cars.Models.Car.CarsDeleteViewModel
+
+<div>
+    <div class="neon">
+        <div class="red">Delete</div>
+    </div>
+    <hr />
+    <div class="formHeight">
+        <div class="dark-transparent-background ">
+            <dl class="row">
+                <div class="form-group row">
+                    <label asp-for="Id" class="col-sm-2 col-form-label"></label>
+                    @Html.DisplayFor(model => Model.Id)
+                </div>
+                <div class="form-group row">
+                    <label asp-for="CarMake" class="col-sm-2 col-form-label"></label>
+                    @Html.DisplayFor(model => Model.CarMake)
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Year" class="col-sm-2 col-form-label"></label>
+                    @Html.DisplayFor(model => Model.Year)
+                </div>
+                <div class="form-group row">
+                    <label asp-for="CarColor" class="col-sm-2 col-form-label"></label>
+                    @Html.DisplayFor(model => Model.CarColor)
+                </div>
+                <div class="form-group row">
+                    <label asp-for="CreatedAt" class="col-sm-2 col-form-label"></label>
+                    @Html.DisplayFor(model => Model.CreatedAt)
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Modifieted " class="col-sm-2 col-form-label"></label>
+                    @Html.DisplayFor(model => Model.Modifieted)
+                </div>
+            </dl>
+        </div>
+    </div>
+    <a asp-action="index" class="btn btn-outline-primary">Back</a>
+    <input type="submit" value="Delete" class="btn btn-danger" />
+</div>

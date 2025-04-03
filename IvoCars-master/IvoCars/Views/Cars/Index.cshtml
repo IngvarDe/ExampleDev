@@ -1,0 +1,77 @@
+﻿@model IEnumerable<IvoCars.Core.Domain.Car>
+
+@{
+    ViewData["Title"] = "Autode nimekiri";
+}
+
+<h1>Autode nimekiri</h1>
+
+<p>
+    <a asp-action="Create">Lisa auto</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Auto mark
+            </th>
+            <th>
+                Auto mudel
+            </th>
+            <th>
+                Väljalaske aasta
+            </th>
+            <th>
+                Käigukast
+            </th>
+            <th>
+                Auto värv
+            </th>
+            <th>
+                Läbisõit
+            </th>
+            <th>
+                Loodud
+            </th>
+            <th>
+                Uuendatud
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarBrand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarGearbox)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarMileage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedAt)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Muuda</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Üksikasjad</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Kustuta</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

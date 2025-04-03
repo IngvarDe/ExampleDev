@@ -1,0 +1,69 @@
+﻿@model IvoCars.Core.Domain.Car
+
+@{
+    ViewData["Title"] = "Kustuta";
+}
+
+<h1>Kustutamine</h1>
+
+<h3>Olete kindel, et soovite seda kirjet kustutada?</h3>
+<div>
+    <h4>Auto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Auto mark
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarBrand)
+        </dd>
+        <dt class = "col-sm-2">
+            Auto mudel
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarModel)
+        </dd>
+        <dt class = "col-sm-2">
+            Väljalaske aasta
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarYear)
+        </dd>
+        <dt class = "col-sm-2">
+            Käigukast
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarGearbox)
+        </dd>
+        <dt class = "col-sm-2">
+            Auto värv
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarColor)
+        </dd>
+        <dt class = "col-sm-2">
+            Läbisõit
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarMileage)
+        </dd>
+        <dt class = "col-sm-2">
+            Loodud
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+        <dt class = "col-sm-2">
+            Muudetud
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ModifiedAt)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Kustuta" class="btn btn-danger" /> |
+        <a asp-action="Index">Tagasi</a>
+    </form>
+</div>

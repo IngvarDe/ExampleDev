@@ -1,0 +1,66 @@
+﻿@model IvoCars.Core.Domain.Car
+
+@{
+    ViewData["Title"] = "Üksikasjad";
+}
+
+<h1>Üksikasjad</h1>
+
+<div>
+    <h4>Auto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Auto mark
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarBrand)
+        </dd>
+        <dt class = "col-sm-2">
+            Auto mudel
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarModel)
+        </dd>
+        <dt class = "col-sm-2">
+            Väljalaske aasta
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarYear)
+        </dd>
+        <dt class = "col-sm-2">
+            Käigukast
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarGearbox)
+        </dd>
+        <dt class = "col-sm-2">
+            Auto värv
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarColor)
+        </dd>
+        <dt class = "col-sm-2">
+            Läbisõit
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarMileage)
+        </dd>
+        <dt class = "col-sm-2">
+            Loodud
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+        <dt class = "col-sm-2">
+            Uuendatud
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ModifiedAt)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Muuda</a> |
+    <a asp-action="Index">Tagasi</a>
+</div>

@@ -1,0 +1,37 @@
+@model CarProject.Core.Domain.Car
+
+<h1>Car Details</h1>
+
+<table class="table">
+    <tr>
+        <th>Make</th>
+        <td>@Model.Make</td>
+    </tr>
+    <tr>
+        <th>Model</th>
+        <td>@Model.Model</td>
+    </tr>
+    <tr>
+        <th>Year</th>
+        <td>@Model.Year</td>
+    </tr>
+    <tr>
+        <th>Color</th>
+        <td>@Model.Color</td>
+    </tr>
+    <tr>
+        <th>Price</th>
+        <td>@Model.Price</td>
+    </tr>
+    <tr>
+        <th>Created At</th>
+        <td>@Model.CreatedAt.ToString("g")</td>
+    </tr>
+    <tr>
+        <th>Modified At</th>
+        <td>@Model.ModifiedAt.ToString("g")</td>
+    </tr>
+</table>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

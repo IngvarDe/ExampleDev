@@ -1,0 +1,1 @@
+"DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=ShopCar;Trusted_Connection=true;MultipleActiveResultSets=true"

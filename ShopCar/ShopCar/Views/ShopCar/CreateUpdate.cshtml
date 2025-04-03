@@ -1,0 +1,59 @@
+﻿@model ShopCar.Models.ShopCar.ShopCarCreateUpdateViewModel
+
+@if (Model.Id.HasValue)
+{
+    <h1>Update</h1>
+}
+else
+{
+    <h1>Create</h1>
+}
+
+<div>
+    <form method="post" enctype="multipart/form-data">
+        <input asp-for="Id" type="hidden" />
+        <input asp-for="CreatedAt" type="hidden" />
+        <input asp-for="UpdatedAt" type="hidden" />
+
+        <div class="form-group row">
+            <label asp-for="Brand" class="col-sm-2 col-form-label">Brand</label>
+            <div class="col-sm-10">
+                <input asp-for="Brand" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="Model" class="col-sm-2 col-form-label">Model</label>
+            <div class="col-sm-10">
+                <input asp-for="Model" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="ModelYear" class="col-sm-2 col-form-label">ModelYear</label>
+            <div class="col-sm-10">
+                <input asp-for="ModelYear" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="Price" class="col-sm-2 col-form-label">Price</label>
+            <div class="col-sm-10">
+                <input asp-for="Price" class="form-control" />
+            </div>
+        </div>
+
+        <hr />
+        @if (Model.Id.HasValue)
+        {
+            <input asp-action="update" asp-controller="ShopCar" type="submit" class="btn btn-primary" value="Update" />
+        }
+        else
+        {
+            <input asp-action="create" asp-controller="ShopCar" type="submit" class="btn btn-primary" value="Create" />
+        }
+
+        <a asp-action="index" class="btn btn-primary">Index</a>
+
+    </form>
+</div>

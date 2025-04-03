@@ -1,0 +1,23 @@
+﻿@model Cars.Models.Car.CarsCreateUpdateViewModel
+
+<h1>Add New Car</h1>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="CarMake" class="control-label"></label>
+        <input asp-for="CarMake" class="form-control" />
+        <span asp-validation-for="CarMake" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Year" class="control-label"></label>
+        <input asp-for="Year" class="form-control" />
+        <span asp-validation-for="Year" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CarColor" class="control-label"></label>
+        <input asp-for="CarColor" class="form-control" />
+        <span asp-validation-for="CarColor" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Car</button>
+</form>

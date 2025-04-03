@@ -1,0 +1,70 @@
+﻿@model IvoCars.Core.Domain.Car
+
+@{
+    ViewData["Title"] = "Muuda";
+}
+
+<h1>Muuda</h1>
+
+<h4>Auto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="CreatedAt" />
+            <div class="form-group">
+                <label asp-for="CarBrand" class="control-label">Auto mark</label>
+                <input asp-for="CarBrand" class="form-control" />
+                <span asp-validation-for="CarBrand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CarModel" class="control-label">Auto mudel</label>
+                <input asp-for="CarModel" class="form-control" />
+                <span asp-validation-for="CarModel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CarYear" class="control-label">Väljalaske aasta</label>
+                <input asp-for="CarYear" class="form-control" />
+                <span asp-validation-for="CarYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CarGearbox" class="control-label">Käigukast</label>
+                <input asp-for="CarGearbox" class="form-control" />
+                <span asp-validation-for="CarGearbox" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CarColor" class="control-label">Auto värv</label>
+                <input asp-for="CarColor" class="form-control" />
+                <span asp-validation-for="CarColor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CarMileage" class="control-label">Läbisõit</label>
+                <input asp-for="CarMileage" class="form-control" />
+                <span asp-validation-for="CarMileage" class="text-danger"></span>
+            </div>
+@*             <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label">Loodud</label>
+                <input asp-for="CreatedAt" class="form-control" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModifiedAt" class="control-label">Muudetud</label>
+                <input asp-for="ModifiedAt" class="form-control" />
+                <span asp-validation-for="ModifiedAt" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <input type="submit" value="Salvesta" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Tagasi</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

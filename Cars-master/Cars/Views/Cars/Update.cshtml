@@ -1,0 +1,40 @@
+﻿@model Cars.Models.Car.CarsCreateUpdateViewModel
+
+
+<div class="green">Update</div>
+
+    <div>
+        <form class="login-form" method="post" enctype="multipart/form-data">
+            <input asp-for="Id" type="hidden" />
+            <input asp-for="CreatedAt" type="hidden" />
+
+
+            <div class="form-input-material">
+                <label asp-for="CarMake" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="CarMake" class="form-control" />
+
+                </div>
+            </div>
+
+            <div class="form-input-material">
+                <label asp-for="Year" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Year" class="form-control" />
+
+                </div>
+            </div>
+
+            <div class="form-input-material">
+                <label asp-for="CarColor" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="CarColor" class="form-control" />
+
+                </div>
+            </div>
+            <hr />
+            <input asp-action="Update" style="width:10%;" asp-controller="Cars" type="submit" class="btn btn-outline-primary" value="Update" />
+        </form>
+    </div>
+     <br />
+    <a asp-action="index" class="btn btn-outline-primary">Back</a>
